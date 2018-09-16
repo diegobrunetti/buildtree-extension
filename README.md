@@ -24,7 +24,6 @@ var list = new List<Category>
         ParentId = "1",
         Description = "Notebooks"
     },
-    ,
     new Category
     {
         Id = "3",
@@ -48,7 +47,60 @@ var list = new List<Category>
 1. Making a call to `BuildTree()` method
 
 ```csharp
-list.BuildTree(k => k.Id, g => g.ParentId);
+var tree = list.BuildTree(k => k.Id, g => g.ParentId);
 ```
 
-will give you a tree data structure like this:
+will return a tree data structure like this:
+
+```json
+[
+  {
+    "Id": "1",
+    "Current": {
+      "Id": "1",
+      "Description": "Computers",
+      "ParentId": null
+    },
+    "Children": [
+      {
+        "Id": "2",
+        "Current": {
+          "Id": "2",
+          "Description": "Notebooks",
+          "ParentId": "1"
+        },
+        "Children": [
+          {
+            "Id": "3",
+            "Current": {
+              "Id": "3",
+              "Description": "Notebook's subcategory",
+              "ParentId": "2"
+            },
+            "Children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": "4",
+    "Current": {
+      "Id": "4",
+      "Description": "Books",
+      "ParentId": null
+    },
+    "Children": [
+      {
+        "Id": "5",
+        "Current": {
+          "Id": "5",
+          "Description": "Biographies",
+          "ParentId": "4"
+        },
+        "Children": []
+      }
+    ]
+  }
+]
+```
