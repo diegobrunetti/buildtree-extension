@@ -16,6 +16,24 @@
                 "reveal": "silent"
             },
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Create Nuget Package",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "pack",
+                "${workspaceFolder}/src/BuildTreeExtension/BuildTreeExtension.csproj",
+                "/p:PackageVersion=1.0.0",
+                "-o",
+                "${workspaceFolder}/nuget"
+
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
         }
     ]
 }
