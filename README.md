@@ -3,7 +3,7 @@ Extension method that builds up a parent/child data structure from a IEnumerable
 
 ## usage:
 
-This extension adds a `BuildTree()` method to IEnumerable<T>. For more info on how to use it, see _samples_ folder.
+This extension adds a `BuildTree()` method to IEnumerable&lt;T>. For more info on how to use it, see _samples_ folder.
 
 
 1. Add a reference to _System.Collections.Generic_;
