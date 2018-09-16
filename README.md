@@ -10,12 +10,12 @@ This extension adds a `BuildTree()` method to IEnumerable&lt;T>. For more info o
 
 **Package Manager:** 
 ```
-Install-Package BuildTreeExtension
+Install-Package DiegoOnSoftware.BuildTreeExtension
 ```
 
 **.NET CLI:** 
 ```
-dotnet add package BuildTreeExtension
+dotnet add package DiegoOnSoftware.BuildTreeExtension
 ```
 
 
