@@ -9,7 +9,7 @@
             "type": "shell",
             "args": [
                 "build",
-                "${workspaceFolder}/src/BuildTreeExtension/BuildTreeExtension.csproj"
+                "${workspaceFolder}/src/BuildTreeExtension/DiegoOnSoftware.BuildTreeExtension.csproj"
             ],
             "group": "build",
             "presentation": {
@@ -23,7 +23,7 @@
             "type": "shell",
             "args": [
                 "pack",
-                "${workspaceFolder}/src/BuildTreeExtension/BuildTreeExtension.csproj",
+                "${workspaceFolder}/src/BuildTreeExtension/DiegoOnSoftware.BuildTreeExtension.csproj",
                 "/p:PackageVersion=1.0.0",
                 "-o",
                 "${workspaceFolder}/nuget"
